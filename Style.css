@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway+Dots&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   font-family: "Playfair Display", serif;
@@ -7,70 +8,68 @@
   font-size: large;
   color: rgb(61, 60, 60);
 }
-body{
+
+body {
   background-color: #e6e6e6;
 }
 
-.personal .heading{
+.personal .heading {
   font-size: x-large;
   margin-bottom: 0;
 }
 
 /* --------------------------------- */
-.heading{
+.heading {
   font-weight: 500;
   font-size: xx-large;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, #ff014f 0%, #333333 100%);
+  background: linear-gradient(135deg, #ff014f 0%, #b19292 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-.personal{
+
+.personal {
   background: linear-gradient(135deg, #1e1e1e 0%, #333333 100%);
-  width: 18vw;
-  height: 100vh;
+  width: 100%; /* Full width on smaller screens */
   text-align: center;
-  position: fixed;
-  left: 160px;
-  top: 0;
   padding: 20px;
   color: white;
 }
 
-.info{
+.info {
   background-color: white;
-  width: 58vw;
-  height: 90vh;
-  position: absolute;
-  right: 160px;
-  top: 5vh;
-  padding: 23px 20px;
-
+  width: 100%; /* Full width on smaller screens */
+  padding: 20px;
   overflow-y: auto;
 }
 
-.grid1{
+.grid1 {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, 1fr); /* Responsive grid */
   row-gap: 5px;
 }
-.abt-col{
+
+.abt-col {
   color: #f00048;
 }
+
 /* --------------------- */
-.grid2{
+.grid2 {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, 1fr); /* Responsive grid */
   row-gap: 20px;
 }
-.sk{
+
+.sk {
   position: relative;
   line-height: 1rem;
 }
+
 .col1::-webkit-progress-value {
   background-color: #333333;
 }
+
 .col1::-webkit-progress-bar {
   background-color: #e6e6e6;
 }
@@ -86,20 +85,20 @@ progress {
 }
 
 /* ------------------------------------ */
-.grid3{
+.grid3 {
   display: grid;
   grid-template-rows: auto auto;
   row-gap: 20px;
   position: relative;
 }
 
-.edu{
-  width: 45%;
+.edu {
+  width: 45%; /* Fixed width for desktop screens */
   background-color: #e1e0e0;
   padding: 10px;
 }
 
-.Img{
+.Img {
   box-sizing: border-box;
   padding: 3px;
   height: 22%;
@@ -110,21 +109,22 @@ progress {
   border-radius: 100%;
   border: 2px solid #e1e0e0;
 }
-.img-right{
+
+.img-right {
   margin-right: 2.8%;
 }
 
-.bigEdu{
+.bigEdu {
   display: flex;
+  flex-direction: row; /* Horizontal layout for desktop screens */
 }
 
-
 .edu-right {
-  display: flex; 
+  display: flex;
   justify-content: flex-end;
 }
 
-.grid3::after{
+.grid3::after {
   content: '';
   position: absolute;
   height: 100%;
@@ -135,62 +135,89 @@ progress {
   z-index: 0;
 }
 
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+  .edu {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .bigEdu {
+    flex-direction: column; /* Stack vertically on smaller screens */
+  }
+
+  .edu-right {
+    justify-content: flex-start; /* Align to the left on smaller screens */
+  }
+  .grid3::after {
+    visibility: hidden;
+  }
+  .Img{
+    content-visibility: hidden;
+    border: none;
+  }
+}
+
 /* -------------------------------------- */
-.img2{
+.img2 {
   height: 28vh;
-  width: 14vw;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 14vw; /* Limit width on larger screens */
   object-fit: cover;
-  transform: scale(1.05);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease; /* Smooth transition */
 }
-.img2:hover{
-  width: 16vw;
-  height: 30vh;
-  object-fit: cover;
+
+.img2:hover {
+  transform: scale(1.1); /* Scale up on hover */
 }
+
 .grid4 > a {
   display: flex;
   justify-content: center;
+  overflow: hidden; /* Ensure the image doesn't overflow */
 }
 
-.grid4{
+.grid4 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 30vh;
+  grid-template-columns: repeat(3, 1fr); /* Responsive grid */
+  gap: 10px; /* Add gap between items */
+  row-gap: 20px;
+  height: auto; /* Auto height for responsiveness */
   align-items: center;
   justify-items: center;
 }
 
-.hov{
+.hov {
   border: 5px solid aqua;
   height: 28vh;
 }
 
 /* ---------------------------- */
-.foot{
+.foot {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Stack vertically on smaller screens */
+  gap: 20px; /* Add gap between items */
 }
 
-.left-box{
+.left-box {
   display: flex;
   flex-direction: column;
-  width: 47%;
+  width: 100%; /* Full width on smaller screens */
   padding: 15px;
   row-gap: 14px;
   border-radius: 8px;
-
   box-shadow: 2px 5px 8px rgb(193, 192, 192);
 }
-.left-box>div>p a:hover{
+
+.left-box > div > p a:hover {
   color: #ff014f;
 }
 
-.find{
+.find {
   display: flex;
-  column-gap: 0.5vw;
+  gap: 0.5vw;
 }
-.find>a{
+
+.find > a {
   width: 3vw;
   height: 3vw;
   display: flex;
@@ -198,25 +225,71 @@ progress {
   align-items: center;
   background-color: bisque;
 }
-.find>a:hover, .find>a:hover i{
+
+.find > a:hover,
+.find > a:hover i {
   background-color: #333333;
   color: white;
 }
 
-.right-box{
+.right-box {
   display: flex;
   flex-direction: column;
-  width: 47%;
+  width: 100%; /* Full width on smaller screens */
   padding: 15px;
   row-gap: 14px;
   border-radius: 8px;
   box-shadow: 2px 5px 8px rgb(193, 192, 192);
 }
-button{
+
+button {
   background-color: bisque;
   transition: background-color 0.3s, color 0.3s;
 }
-button:hover, button:hover i{
+
+button:hover,
+button:hover i {
   background-color: #333333;
   color: white;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .personal {
+    width: 18vw; /* Fixed width on larger screens */
+    height: 100vh;
+    position: fixed;
+    left: 160px;
+    top: 0;
+  }
+
+  .info {
+    width: 58vw; /* Fixed width on larger screens */
+    height: 90vh;
+    position: absolute;
+    right: 160px;
+    top: 5vh;
+  }
+
+  .grid1,
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bigEdu {
+    flex-direction: row; /* Horizontal layout on larger screens */
+  }
+
+  .foot {
+    flex-direction: row; /* Horizontal layout on larger screens */
+  }
+
+  .left-box,
+  .right-box {
+    width: 47%; /* Fixed width on larger screens */
+  }
 }
