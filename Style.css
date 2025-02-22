@@ -35,6 +35,7 @@ body {
   text-align: center;
   padding: 20px;
   color: white;
+  row-gap: 8px;
 }
 
 .info {
@@ -214,12 +215,12 @@ progress {
 
 .find {
   display: flex;
-  gap: 0.5vw;
+  gap: 2vw;
 }
 
 .find > a {
-  width: 3vw;
-  height: 3vw;
+  width: 6vw;
+  height: 6vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,5 +292,12 @@ button:hover i {
   .left-box,
   .right-box {
     width: 47%; /* Fixed width on larger screens */
+  }
+  .find {
+    gap: 0.5vw;
+  }
+  .find > a {
+    width: 3vw;
+    height: 3vw;
   }
 }
