@@ -31,7 +31,8 @@ body {
 
 .personal {
   background: linear-gradient(135deg, #1e1e1e 0%, #333333 100%);
-  width: 100%; /* Full width on smaller screens */
+  width: 100%;
+  /* Full width on smaller screens */
   text-align: center;
   padding: 20px;
   color: white;
@@ -40,14 +41,16 @@ body {
 
 .info {
   background-color: white;
-  width: 100%; /* Full width on smaller screens */
+  width: 100%;
+  /* Full width on smaller screens */
   padding: 20px;
   overflow-y: auto;
 }
 
 .grid1 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Responsive grid */
+  grid-template-columns: repeat(2, 1fr);
+  /* Responsive grid */
   row-gap: 5px;
 }
 
@@ -58,7 +61,8 @@ body {
 /* --------------------- */
 .grid2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Responsive grid */
+  grid-template-columns: repeat(2, 1fr);
+  /* Responsive grid */
   row-gap: 20px;
 }
 
@@ -94,7 +98,8 @@ progress {
 }
 
 .edu {
-  width: 45%; /* Fixed width for desktop screens */
+  width: 45%;
+  /* Fixed width for desktop screens */
   background-color: #e1e0e0;
   padding: 10px;
 }
@@ -111,13 +116,18 @@ progress {
   border: 2px solid #e1e0e0;
 }
 
+.experience-img {
+  height: 10%;
+}
+
 .img-right {
   margin-right: 2.8%;
 }
 
 .bigEdu {
   display: flex;
-  flex-direction: row; /* Horizontal layout for desktop screens */
+  flex-direction: row;
+  /* Horizontal layout for desktop screens */
 }
 
 .edu-right {
@@ -139,20 +149,25 @@ progress {
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
   .edu {
-    width: 100%; /* Full width on smaller screens */
+    width: 100%;
+    /* Full width on smaller screens */
   }
 
   .bigEdu {
-    flex-direction: column; /* Stack vertically on smaller screens */
+    flex-direction: column;
+    /* Stack vertically on smaller screens */
   }
 
   .edu-right {
-    justify-content: flex-start; /* Align to the left on smaller screens */
+    justify-content: flex-start;
+    /* Align to the left on smaller screens */
   }
+
   .grid3::after {
     visibility: hidden;
   }
-  .Img{
+
+  .Img {
     content-visibility: hidden;
     border: none;
   }
@@ -161,28 +176,36 @@ progress {
 /* -------------------------------------- */
 .img2 {
   height: 28vh;
-  width: 100%; /* Full width on smaller screens */
-  max-width: 14vw; /* Limit width on larger screens */
+  width: 100%;
+  /* Full width on smaller screens */
+  max-width: 14vw;
+  /* Limit width on larger screens */
   object-fit: cover;
-  transition: transform 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease;
+  /* Smooth transition */
 }
 
 .img2:hover {
-  transform: scale(1.1); /* Scale up on hover */
+  transform: scale(1.1);
+  /* Scale up on hover */
 }
 
-.grid4 > a {
+.grid4>a {
   display: flex;
   justify-content: center;
-  overflow: hidden; /* Ensure the image doesn't overflow */
+  overflow: hidden;
+  /* Ensure the image doesn't overflow */
 }
 
 .grid4 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Responsive grid */
-  gap: 10px; /* Add gap between items */
+  grid-template-columns: repeat(3, 1fr);
+  /* Responsive grid */
+  gap: 10px;
+  /* Add gap between items */
   row-gap: 20px;
-  height: auto; /* Auto height for responsiveness */
+  height: auto;
+  /* Auto height for responsiveness */
   align-items: center;
   justify-items: center;
 }
@@ -195,21 +218,24 @@ progress {
 /* ---------------------------- */
 .foot {
   display: flex;
-  flex-direction: column; /* Stack vertically on smaller screens */
-  gap: 20px; /* Add gap between items */
+  flex-direction: column;
+  /* Stack vertically on smaller screens */
+  gap: 20px;
+  /* Add gap between items */
 }
 
 .left-box {
   display: flex;
   flex-direction: column;
-  width: 100%; /* Full width on smaller screens */
+  width: 100%;
+  /* Full width on smaller screens */
   padding: 15px;
   row-gap: 14px;
   border-radius: 8px;
   box-shadow: 2px 5px 8px rgb(193, 192, 192);
 }
 
-.left-box > div > p a:hover {
+.left-box>div>p a:hover {
   color: #ff014f;
 }
 
@@ -218,7 +244,7 @@ progress {
   gap: 2vw;
 }
 
-.find > a {
+.find>a {
   width: 6vw;
   height: 6vw;
   display: flex;
@@ -227,8 +253,8 @@ progress {
   background-color: bisque;
 }
 
-.find > a:hover,
-.find > a:hover i {
+.find>a:hover,
+.find>a:hover i {
   background-color: #333333;
   color: white;
 }
@@ -236,12 +262,20 @@ progress {
 .right-box {
   display: flex;
   flex-direction: column;
-  width: 100%; /* Full width on smaller screens */
+  width: 100%;
+  /* Full width on smaller screens */
   padding: 15px;
   row-gap: 14px;
   border-radius: 8px;
   box-shadow: 2px 5px 8px rgb(193, 192, 192);
 }
+
+.ipt {
+  border: 2px solid #534e4e; /* pick any color */
+  outline: none;
+  border-radius: 5px;
+}
+
 
 button {
   background-color: bisque;
@@ -257,7 +291,8 @@ button:hover i {
 /* Responsive Styles */
 @media (min-width: 768px) {
   .personal {
-    width: 18vw; /* Fixed width on larger screens */
+    width: 18vw;
+    /* Fixed width on larger screens */
     height: 100vh;
     position: fixed;
     left: 160px;
@@ -265,7 +300,8 @@ button:hover i {
   }
 
   .info {
-    width: 58vw; /* Fixed width on larger screens */
+    width: 58vw;
+    /* Fixed width on larger screens */
     height: 90vh;
     position: absolute;
     right: 160px;
@@ -282,21 +318,26 @@ button:hover i {
   }
 
   .bigEdu {
-    flex-direction: row; /* Horizontal layout on larger screens */
+    flex-direction: row;
+    /* Horizontal layout on larger screens */
   }
 
   .foot {
-    flex-direction: row; /* Horizontal layout on larger screens */
+    flex-direction: row;
+    /* Horizontal layout on larger screens */
   }
 
   .left-box,
   .right-box {
-    width: 47%; /* Fixed width on larger screens */
+    width: 47%;
+    /* Fixed width on larger screens */
   }
+
   .find {
     gap: 0.5vw;
   }
-  .find > a {
+
+  .find>a {
     width: 3vw;
     height: 3vw;
   }
